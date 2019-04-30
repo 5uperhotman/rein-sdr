@@ -1,0 +1,18 @@
+<testsuite errors="0" failures="1" name="unittest.suite.TestSuite" tests="1" time="0.002">
+  <testcase classname="__main__.qa_diode_py_cc" name="test_001_t" time="0.0022">
+    <failure type="exceptions.AssertionError">4 != 0
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "qa_diode_py_cc.py", line 50, in test_001_t
+    self.assertComplexTuplesAlmostEqual(src_data, result_data, 2)
+  File "/usr/lib/python2.7/dist-packages/gnuradio/gr_unittest.py", line 72, in assertComplexTuplesAlmostEqual
+    self.assertEqual (len(a), len(b))
+  File "/usr/lib/python2.7/unittest/case.py", line 513, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/usr/lib/python2.7/unittest/case.py", line 506, in _baseAssertEqual
+    raise self.failureException(msg)
+    </failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

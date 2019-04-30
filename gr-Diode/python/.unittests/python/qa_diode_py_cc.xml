@@ -1,0 +1,14 @@
+<testsuite errors="1" failures="0" name="unittest.suite.TestSuite" tests="1" time="0.003">
+  <testcase classname="__main__.qa_diode_py_cc" name="test_001_t" time="0.0024">
+    <error type="exceptions.TypeError">in method 'vector_source_c_make', argument 1 of type 'std::vector&lt; gr_complex,std::allocator&lt; gr_complex &gt; &gt; const &amp;'
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "qa_diode_py_cc.py", line 43, in test_001_t
+    src = blocks.vector_source_c(src_data)
+  File "/usr/lib/python2.7/dist-packages/gnuradio/blocks/blocks_swig1.py", line 2628, in make
+    return _blocks_swig1.vector_source_c_make(*args, **kwargs)
+    </error>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+<testsuite errors="0" failures="1" name="unittest.suite.TestSuite" tests="1" time="0.010">
+  <testcase classname="__main__.qa_diode1_py_cc" name="test_001_t" time="0.0104">
+    <failure type="exceptions.AssertionError">(1+5j) != (5.699999809265137+0j) within 4 places
+  File "/usr/lib/python2.7/unittest/case.py", line 329, in run
+    testMethod()
+  File "qa_diode1_py_cc.py", line 49, in test_001_t
+    self.assertComplexTuplesAlmostEqual (src_data, result_data, 4)
+  File "/usr/lib/python2.7/dist-packages/gnuradio/gr_unittest.py", line 74, in assertComplexTuplesAlmostEqual
+    self.assertComplexAlmostEqual (a[i], b[i], places, msg)
+  File "/usr/lib/python2.7/dist-packages/gnuradio/gr_unittest.py", line 47, in assertComplexAlmostEqual
+    (msg or '%s != %s within %s places' % (`first`, `second`, `places` ))
+    </failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
