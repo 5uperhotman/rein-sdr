@@ -100,6 +100,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -121,17 +132,6 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,19 +166,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-python/CMakeFiles/pygen_python_27304.dir/rule:
-	cd /home/kasutaja/gr-tutorial && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_27304.dir/rule
-.PHONY : python/CMakeFiles/pygen_python_27304.dir/rule
+python/CMakeFiles/pygen_python_c708b.dir/rule:
+	cd /home/kasutaja/gr-tutorial && $(MAKE) -f CMakeFiles/Makefile2 python/CMakeFiles/pygen_python_c708b.dir/rule
+.PHONY : python/CMakeFiles/pygen_python_c708b.dir/rule
 
 # Convenience name for target.
-pygen_python_27304: python/CMakeFiles/pygen_python_27304.dir/rule
+pygen_python_c708b: python/CMakeFiles/pygen_python_c708b.dir/rule
 
-.PHONY : pygen_python_27304
+.PHONY : pygen_python_c708b
 
 # fast build rule for target.
-pygen_python_27304/fast:
-	cd /home/kasutaja/gr-tutorial && $(MAKE) -f python/CMakeFiles/pygen_python_27304.dir/build.make python/CMakeFiles/pygen_python_27304.dir/build
-.PHONY : pygen_python_27304/fast
+pygen_python_c708b/fast:
+	cd /home/kasutaja/gr-tutorial && $(MAKE) -f python/CMakeFiles/pygen_python_c708b.dir/build.make python/CMakeFiles/pygen_python_c708b.dir/build
+.PHONY : pygen_python_c708b/fast
 
 # Help Target
 help:
@@ -190,10 +190,10 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... pygen_python_27304"
+	@echo "... pygen_python_c708b"
+	@echo "... test"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... test"
 .PHONY : help
 
 

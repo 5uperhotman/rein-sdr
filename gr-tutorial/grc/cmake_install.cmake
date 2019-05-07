@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
     "/home/kasutaja/gr-tutorial/grc/tutorial_multiply_py_ff.xml"
     "/home/kasutaja/gr-tutorial/grc/tutorial_diode_py_cc.xml"
+    "/home/kasutaja/gr-tutorial/grc/tutorial_diode1_py_cc.xml"
     )
 endif()
 

@@ -35,20 +35,26 @@ class qa_diode1_py_cc (gr_unittest.TestCase):
         # set up fg
         self.tb.run ()
         # check data
+	print("Check data")
 	src_data = (0+2j, 1+5j, -2+3j, 5.5+12j, -0.5+22j)
 	expected_result = (0+2j, 0.7+5j, -2+3j, 0.7+12j, -0.5+22j)
 #	src_data = (0, 1, -2, 5.5, -0.5)
 #	expected_result = (0, 0.7, -2, 0.7, -0.5)
 	src = blocks.vector_source_c (src_data)
-	mult = diode1_py_cc (0.7)
+	mult = diode1_py_cc(0.7)
 	snk = blocks.vector_sink_c ()
 	self.tb.connect (src, mult)
 	self.tb.connect (mult, snk)
 	self.tb.run ()
 	result_data = snk.data ()
-	self.assertComplexTuplesAlmostEqual (src_data, result_data, 4)
+	print("Expected result")
+	print(expected_result)
+	print("Result data")
+	print(result_data)
+	self.assertComplexTuplesAlmostEqual (expected_result, result_data, 4)
 
 
 
 if __name__ == '__main__':
+    print("Starting the program")
     gr_unittest.run(qa_diode1_py_cc, "qa_diode1_py_cc.xml")

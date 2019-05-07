@@ -38,18 +38,12 @@ class diode1_py_cc(gr.sync_block):
         in0 = input_items[0]
         out = output_items[0]
         # <+signal processing here+>
-	print("in0: ", in0)
-	print("in0[0]:  ", in0[0])	
-	print("in0 real: ", in0.real)
-	print("in0 imag: ", in0.imag)
 	for i in range(len(in0)):		
-		if in0[i].real < 0.7:
+		if in0[i].real < self.threshould1:
 			out[i] = in0[i]
 		else:
-			out[i] = 0.7 + in0[i].imag
-			print("nüüd peaks else tulema")
-		print("in0[i]:  ", in0[i])
-		print("out", out)
+			a = in0[i].imag		
+			out[i] = self.threshould1 + a*1j
 #	out[:] = in0
 #	print("out", out)
         return len(output_items[0])

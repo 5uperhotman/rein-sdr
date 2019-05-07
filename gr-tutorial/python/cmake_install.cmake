@@ -37,6 +37,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/kasutaja/gr-tutorial/python/__init__.py"
     "/home/kasutaja/gr-tutorial/python/multiply_py_ff.py"
     "/home/kasutaja/gr-tutorial/python/diode_py_cc.py"
+    "/home/kasutaja/gr-tutorial/python/diode1_py_cc.py"
     )
 endif()
 
@@ -45,9 +46,11 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/kasutaja/gr-tutorial/python/__init__.pyc"
     "/home/kasutaja/gr-tutorial/python/multiply_py_ff.pyc"
     "/home/kasutaja/gr-tutorial/python/diode_py_cc.pyc"
+    "/home/kasutaja/gr-tutorial/python/diode1_py_cc.pyc"
     "/home/kasutaja/gr-tutorial/python/__init__.pyo"
     "/home/kasutaja/gr-tutorial/python/multiply_py_ff.pyo"
     "/home/kasutaja/gr-tutorial/python/diode_py_cc.pyo"
+    "/home/kasutaja/gr-tutorial/python/diode1_py_cc.pyo"
     )
 endif()
 
